@@ -1,0 +1,42 @@
+public class Funcionario{
+	public string Nome{get;set;}
+	public int Matricula{get;set;}
+	public float Salario{get;set;}
+}
+
+public class Program
+{
+	public static void Main()
+	{
+		Funcionario[] vec = new Funcionario[4];
+		float soma = 0;
+		
+		vec[0] = new Funcionario();
+		vec[0].Nome = "Carolina";
+		vec[0].Matricula = 2010;
+		vec[0].Salario = 1200.0f;
+		
+		vec[1] = new Funcionario();
+		vec[1].Nome = "Melissa";
+		vec[1].Matricula = 2809;
+		vec[1].Salario = 1100.0f;
+		
+		vec[2] = new Funcionario();
+		vec[2].Nome = "Beatriz";
+		vec[2].Matricula = 2403;
+		vec[2].Salario = 1500.0f;
+		
+		vec[3] = new Funcionario();
+		vec[3].Nome = "Julia";
+		vec[3].Matricula =1001;
+		vec[3].Salario = 1300.0f;
+		
+		for(int i = 0; i < 4; i++){
+			soma = soma + vec[i].Salario;
+		}
+		for(int i = 0; i < 4; i++){
+			if(vec[i].Salario > soma/4.0f)
+				Console.WriteLine("O funcionario " + vec[i].Matricula + " " + vec[i].Nome + " tem um salário maior que a média de " + soma/4.0f);
+		}
+	}
+}
