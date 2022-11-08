@@ -1,0 +1,56 @@
+static void Main() {
+    funcionario[ ] func = new funcionario[4];
+    float somasal = 0;
+    
+    func[0].setNome("Beatriz");
+    func[0].setCodigo(1234);
+    func[0].setSalario(13);
+    
+    func[1].setNome("Carolina");
+    func[1].setCodigo(2134);
+    func[1].setSalario(11);
+    
+    func[2].setNome("Melissa");
+    func[2].setCodigo(1243);
+    func[2].setSalario(11);
+    
+    func[3].setNome("Julia");
+    func[3].setCodigo(2143);
+    func[3].setSalario(12);
+    
+ for(int i = 0; i < 4; i++){
+        if(func[i].getSalario() > somasal/4)
+            Console.WriteLine(func[i].getNome() + " //  " + func[i].getCodigo());
+    }
+
+    for(int i = 0; i < 4; i++){
+        somasal += func[i].getSalario();
+    }
+    Console.WriteLine("A média do salário recebido é: " + somasal/4);
+
+     }
+
+class funcionario{
+    private string nome;
+    private int codigo;
+    private float salario;
+   
+    public string getNome(){
+        return this.nome;
+    }
+    public int getCodigo(){
+        return this.codigo;
+    }
+    public float getSalario(){
+        return this.salario;
+    }
+    
+    public void setNome(string nome_){
+        this.nome = nome_;
+    }
+    public void setCodigo(int codigo_){
+        this.codigo = codigo_;
+    }
+    public void setSalario(float salario_){
+        this.salario = salario_;
+    }
